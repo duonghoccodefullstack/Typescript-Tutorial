@@ -1,39 +1,26 @@
-import { Student, StudentManager } from './dist/lab/studentModule';
-import { calculateArea } from './dist/lab/calculate';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // let firstName = "Dylan";
-
 // console.log( firstName);
-
 // perfect 
 // const sum = (x:number , y: number) => {
 //     return x + y ;
 // }
 // console.log("check sum",sum(4,7))
-
 // const numbers = [1, 2, 3]; // inferred to type number[]
-
 // numbers.push(4); 
-
-
 // console.log(numbers);
-
 // let head: number = numbers[0]; 
-
 // console.log(head);
-
 // Tuples 
 // let arr : [number, boolean,string];
 // arr = [5,true,"hello"]
 // console.log(arr)
-
 // let arr : [number, boolean,string];
-
 // arr=[5,true,"test"]
 // arr.push("Fix bug")
 // console.log(arr)
-
 // Object Types 
-
 // const car : {type : string, model :string,year:number} = {
 //  type : "vinfast",
 //  model:"Vn",
@@ -41,7 +28,6 @@ import { calculateArea } from './dist/lab/calculate';
 // }
 // car.model ="Campuchia"
 // console.log(car)
-
 // optional property
 // no error 
 // const car : {type : string, year?:number} = {
@@ -55,14 +41,10 @@ import { calculateArea } from './dist/lab/calculate';
 //    }
 //    car.year = 2000
 //    console.log(car)
-
 // const nameAgeMap: { [index: string]: number } = {};
 // nameAgeMap.Jack = 25; // no error
 // // nameAgeMap.Mark = "Fifty"; // error 
-
 // console.log(nameAgeMap) // { Jack: 25 }
-
-
 // TypeScript Enums
 // Initialized
 // enum Test {
@@ -73,7 +55,6 @@ import { calculateArea } from './dist/lab/calculate';
 // }
 // let currentTest = Test.East
 // console.log(currentTest) // Tăng 1 đơn vị định hướng 1 giá trị 
-
 // Fully Initialized
 // enum Test {
 //     North = 2,
@@ -83,9 +64,7 @@ import { calculateArea } from './dist/lab/calculate';
 // }
 // let currentTest = Test.East
 // console.log(currentTest) // 300 
-
 //Interfaces
-
 // type CarY = number
 // type CarT = string
 // type CarM = string
@@ -94,18 +73,15 @@ import { calculateArea } from './dist/lab/calculate';
 //     type : CarT,
 //     model : CarM
 // }
-
 // const carYear : CarY = 2000
 // const carType : CarT = "Vinfast"
 // const carModel : CarM = "Vn"
-
 // const car: Car = {
 //     year : carYear,
 //     type : carType,
 //     model :carModel
 // }
 // console.log(car)
-
 // interface HCN {
 //     height : number ,
 //     width : number 
@@ -115,7 +91,6 @@ import { calculateArea } from './dist/lab/calculate';
 //     width: 100
 // }
 // console.log(hcn)
-
 // interface HCN { // con
 //     height : number ,
 //     width : number 
@@ -129,94 +104,70 @@ import { calculateArea } from './dist/lab/calculate';
 //     color: "red"
 // }
 // console.log(hcnandcolor)
-
 // Union Types Functions
-
 // function printStatusCode(code: string | number) {
 //     console.log(`My status code is ${code}.`)
 //   }
 //   printStatusCode(404);
 //   printStatusCode('404');
-
 //   function printStatusCode(code: string ) {
 //     console.log(`My status code is ${code.toUpperCase()}.`)
 //   }
-
 //   printStatusCode('david dang');
-
 // Functions
 // function getTime() :number {
 //     return new Date().getDate();
 // }
 // console.log(getTime())
-
 // function printHello(): void {
 //     console.log('Hello!');
 //   }
 // console.log(printHello())
-
 // function nhan(a:number ,b:number) {
 //     return a * b;
 // }
 // console.log(nhan(2,5))
-
 // Casting 
 // let x : unknown = "hello"
 // console.log((x as string ).length) // 5
-
 // let x: unknown = 'hello';
 // console.log((<string>x).length);
-
 // class 
 // class Person {
 //     name: string;
 // }
-
 // console.log(Person);
-
 //   const person = new Person();
 //   person.name = "Tony";
-
 //   console.log(person);
-
 // class Person {
 //     private name: string;
-
 //     public constructor(name: string) {
 //         this.name = name;
 //     }
-
 //     public getName(): string {
 //         return this.name;
 //     }
 // }
-
 // const person = new Person("tony");
 // console.log( person.getName())
-
 // interface Shape {
 //     getArea: () => number;
 //   }
-
 //   class Rectangle implements Shape {
 //     public constructor(protected readonly width: number, protected readonly height: number) {}
-
 //     public getArea(): number {
 //       return this.width * this.height;
 //     }
 //   }
-
 //   class Square extends Rectangle {
 //     public constructor(width: number) {
 //       super(width, width);
 //     }
 //     // getArea gets inherited from Rectangle
 //   }
-
 //   const mySq = new Square(20);
-
 //   console.log(mySq.getArea());
-
 // interface Point {
 //     x :number ;
 //     y :number ;
@@ -225,7 +176,6 @@ import { calculateArea } from './dist/lab/calculate';
 // pointPart.x = 10
 // console.log(pointPart)
 //  TypeScript Readonly
-
 // interface PersonInterface {
 //     name: string;
 //     age: number;
@@ -234,9 +184,7 @@ import { calculateArea } from './dist/lab/calculate';
 //     name: "Tony",
 //     age: 50,
 //   };
-
 //   console.log(person.name);
-
 // Lab 
 // let username: string = "tony";
 // let password: string = "123456";
@@ -244,23 +192,19 @@ import { calculateArea } from './dist/lab/calculate';
 //     return username === "tony" && password === "123456";
 // };
 // console.log(login(username, password)); //true
-
 // let username: string = "tony";
 // let age: number =  30 ;
 // let isActive: boolean = true;
 // let Hobby: string[] = ["sport", "music"];
-
 // console.log("username", username);
 // console.log("age", age);
 // console.log("isActive", isActive);
 // console.log("Hobby", Hobby);
-
 // function grett(name: string, age :number):string {
 //     return `hello ${name}. You are ${age} years old.`
 // }
 // console.log(grett("tony",30))
 // console.log(grett("david",35));
-
 // interface Person {
 //     name: string;
 //     age : number,
@@ -272,7 +216,6 @@ import { calculateArea } from './dist/lab/calculate';
 //     address : "Ha Noi"
 // }
 // console.log(person) object
-
 // class Animal {
 //     name : string ;
 //     constructor(name : string){
@@ -299,7 +242,6 @@ import { calculateArea } from './dist/lab/calculate';
 // cat.meow();
 // cat.speak();
 //  bai toan phuong tien giao thong
-
 // class Vehicle {
 //     brand : string;
 //     model : string;
@@ -333,7 +275,6 @@ import { calculateArea } from './dist/lab/calculate';
 //         return `${this.brand} ${this.model} ${this.year} ${this.type}`
 //     }
 // }
-
 // const car =  new Car(4 , "vinfast" , "Vn" , 2000)
 // console.log(car.getDetais());
 // bai toan thu vien 
@@ -375,11 +316,9 @@ import { calculateArea } from './dist/lab/calculate';
 // function indentity<T>(value: T): T {
 //     return value
 // }
-
 // console.log(indentity("hello"));
 // console.log(indentity(1));
 // console.log(indentity(true));
-
 // // Generic Stack
 // class Stack<T> {
 //     private elements: T[] = []
@@ -405,7 +344,6 @@ import { calculateArea } from './dist/lab/calculate';
 // stack.push(null)
 // console.log(stack.isEmpty()); // output : 3
 // console.log(stack);
-
 // Generrix Pair
 // class Pair<T, U> {
 //     constructor(public first: T, public second: U) {}
@@ -416,7 +354,6 @@ import { calculateArea } from './dist/lab/calculate';
 //         return this.second;
 //     }
 // }
-
 // const pair = new Pair<number, string>(1, "hello");
 // console.log(pair.getFirst()); // Output: 1
 // console.log(pair.getSecond()); // Output: "hello"
@@ -442,7 +379,6 @@ import { calculateArea } from './dist/lab/calculate';
 // queue.enqueue(3)
 // console.log(queue.peek()); // Output: 1
 // console.log(queue.dequeue()); // Output: 1
-
 // enum Weekdays {
 //     MONDAY,
 //     TUESDAY,
@@ -454,7 +390,6 @@ import { calculateArea } from './dist/lab/calculate';
 // }
 // let today: Weekdays = Weekdays.TUESDAY
 // console.log(today)
-
 // enum OrderStatus {
 //     Pending = "Pending",
 //     Processing = "Processing",
@@ -482,14 +417,12 @@ import { calculateArea } from './dist/lab/calculate';
 // order1.updateStatus(OrderStatus.Shipped)
 // // console.log(order1.getStatus());
 // console.log(order1);
-
 // todo list
 // enum TaskStatus {
 //     NotStarted = "NotStarted",
 //     InProgress = "InProgress",
 //     Completed = "Completed"
 // }
-
 // class Task {
 //     id : number;
 //     name : string;
@@ -508,7 +441,6 @@ import { calculateArea } from './dist/lab/calculate';
 // }
 // const task1 = new Task(1, "Learn TypeScript", TaskStatus.NotStarted)
 // console.log(task1);
-
 // quan li do uong 
 // enum BeverageType {
 //     Coffee = "Coffee",
@@ -546,12 +478,8 @@ import { calculateArea } from './dist/lab/calculate';
 // }
 // const colorBox = new ColorBox(Color.Red)
 // console.log(colorBox.getColor())
-
-
 // lab/studentModule.ts
-
 // const student = new StudentManager([])
-
 // student.addStudent(new Student(1, "tony", 30, "IT"))
 // student.addStudent(new Student(2, "david", 20, "QA"))
 // student.addStudent(new Student(3, "anana", 18, "SAlE"))
@@ -559,14 +487,12 @@ import { calculateArea } from './dist/lab/calculate';
 // console.log(student.removeStudent(2));
 // const getAll = new Student(1, "admin", 30, "DL")
 // console.log(getAll.getDetail());
-
 // let area = calculateArea(5,100)
 // console.log(area)
 // declare namespace mylib {
 //     export function makeGreeting(name: string): string;
 //     let numberOfGreetings : number;
 // }
-
 // let result = mylib.makeGreeting("Tony");
 // console.log(result);
-
+//# sourceMappingURL=test.js.map

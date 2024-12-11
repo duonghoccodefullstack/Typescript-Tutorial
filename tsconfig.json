@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+    },
+    "scripts": {
+        "build": "tsc", // Biên dịch dự án với lệnh `npm run build`
+        "watch": "tsc --watch " // Theo dõi thay đổi và biên dịch tự động
+    }
+}
